@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shraddha Garule's Data Analyst portfolio featuring Python, SQL, Excel and data analytics projects.">
+<title>Shraddha Garule | Data Analyst Portfolio</title>
+
+<style>
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --border: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  width: min(1050px, 90%);
+  margin: auto;
+}
+
+nav {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover, .link:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 105px 0 90px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 58px);
+  line-height: 1.15;
+  margin: 16px 0;
+  letter-spacing: -2px;
+}
+
+.hero h2 {
+  font-size: 21px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  margin: 22px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 7px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 5px 8px 5px 0;
+}
+
+.btn.secondary {
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+section {
+  padding: 65px 0;
+}
+
+.section-title {
+  font-size: 29px;
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.about {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 12px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 9px 15px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project {
+  background: white;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: .2s;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  border-color: #93b4f8;
+}
+
+.project h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 17px;
+}
+
+.tag {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.education-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+  margin-bottom: 14px;
+}
+
+.education-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-box {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media(max-width:650px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .nav-inner {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+  nav a {
+    margin: 0 7px;
+    font-size: 12px;
+  }
+  .hero {
+    padding: 70px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">Shraddha.</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container hero">
+  <div class="eyebrow">Welcome to my portfolio</div>
+  <h1>Hi, I'm Shraddha<br>Garule.</h1>
+  <h2>Aspiring Data Analyst</h2>
+  <p>
+    I am a BCA graduate passionate about transforming raw data
+    into meaningful insights using Python, SQL and Microsoft Excel.
+    I enjoy data cleaning, exploratory data analysis and
+    creating visualizations that support better decisions.
+  </p>
+  <a href="#projects" class="btn">Explore My Projects</a>
+  <a href="resume.pdf" class="btn secondary" download>Download Resume</a>
+</header>
+
+<main>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+      <p>
+        I am an aspiring Data Analyst and a Bachelor of Computer
+        Applications graduate from Savitribai Phule Mahila
+        Mahavidyalaya, Satara, affiliated with Shivaji University,
+        Kolhapur.
+      </p>
+      <br>
+      <p>
+        I have hands-on academic project experience with Python,
+        Pandas, NumPy, SQL/MySQL and Microsoft Excel. My interests
+        include data analysis, data visualization, database
+        management and business reporting.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-desc">Tools and technologies I work with.</p>
+    <div class="skills">
+      <span class="skill">Python</span>
+      <span class="skill">Pandas</span>
+      <span class="skill">NumPy</span>
+      <span class="skill">SQL</span>
+      <span class="skill">MySQL</span>
+      <span class="skill">Microsoft Excel</span>
+      <span class="skill">PivotTables</span>
+      <span class="skill">Matplotlib</span>
+      <span class="skill">Seaborn</span>
+      <span class="skill">Data Cleaning</span>
+      <span class="skill">EDA</span>
+      <span class="skill">Descriptive Statistics</span>
+      <span class="skill">MIS Reporting</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-desc">
+      Selected academic and practical data analytics projects.
+    </p>
+
+    <div class="projects">
+
+      <article class="project">
+        <h3>01. Pune Street Tree Census</h3>
+        <p>
+          Analysed 3,065 records and 37 attributes. Performed
+          data cleaning, removed duplicates and explored tree
+          distribution, health categories and environmental
+          factors across 15 wards.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Seaborn</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>02. Airport Data Analysis</h3>
+        <p>
+          Cleaned and explored airport data using filtering,
+          descriptive statistics and grouped analysis.
+          Created charts to visualize airline, ticket-price
+          and departure-time patterns.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Seaborn</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>03. Food Delivery Analysis</h3>
+        <p>
+          Analysed sample food delivery orders using
+          statistical measures and filtering techniques.
+          Calculated average, median, variance and other
+          descriptive statistics.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Statistics</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>04. Employee Salary Analysis</h3>
+        <p>
+          Analysed employee salary data using Excel
+          PivotTables, summaries and charts.
+        </p>
+        <div class="tags">
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">PivotTables</span>
+          <span class="tag">Charts</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>05. School Database Management System</h3>
+        <p>
+          Designed a relational school database and
+          practised SQL queries and data retrieval.
+        </p>
+        <div class="tags">
+          <span class="tag">MySQL</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Database</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>06. Sales MIS Report Dashboard</h3>
+        <p>
+          Created structured sales reports using Excel
+          summaries, lookup functions and charts.
+        </p>
+        <div class="tags">
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">MIS Reporting</span>
+          <span class="tag">Charts</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Education & Training</h2>
+
+    <div class="education-card">
+      <h3>Bachelor of Computer Applications (BCA)</h3>
+      <p>Savitribai Phule Mahila Mahavidyalaya, Satara</p>
+      <p>Affiliated to Shivaji University, Kolhapur</p>
+      <p>July 2025 | CGPA: 6.58</p>
+    </div>
+
+    <div class="education-card">
+      <h3>Higher Secondary Certificate (HSC)</h3>
+      <p>Maharashtra State Board | 2022 | 60%</p>
+    </div>
+
+    <div class="education-card">
+      <h3>Secondary School Certificate (SSC)</h3>
+      <p>Maharashtra State Board | 2020 | 77%</p>
+    </div>
+
+    <div class="education-card">
+      <h3>Data Analytics Training</h3>
+      <p>NMD Pvt. Ltd., Pune</p>
+      <p>July 2025 – January 2026</p>
+      <p>Excel, SQL, Python and foundational data analytics.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="contact-box">
+      <p>
+        I am interested in entry-level Data Analyst,
+        Data Analyst Internship and MIS Executive opportunities.
+        Feel free to connect with me.
+      </p>
+      <br>
+      <p>Email:
+        <a class="link" href="mailto:garuleshraddha@gmail.com">
+          garuleshraddha@gmail.com
+        </a>
+      </p>
+      <p>Phone: 8857070474</p>
+      <p>LinkedIn:
+        <a class="link"
+        href="https://linkedin.com/in/shraddha-garule-1560b1246"
+        target="_blank" rel="noopener">View Profile</a>
+      </p>
+      <p>GitHub:
+        <a class="link"
+        href="https://github.com/Shraddha-1110"
+        target="_blank" rel="noopener">View Projects</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Shraddha Santosh Garule | Data Analyst Portfolio
+  </div>
+</footer>
+
+</body>
+</html>
